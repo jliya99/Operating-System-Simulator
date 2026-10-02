@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,20 +25,22 @@
         /* NAVBAR */
 
         nav {
-            width: 100%;
-            padding: 18px 8%;
-            background: #111827;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 8%;
+
+            background: #111827;
             border-bottom: 1px solid #334155;
         }
 
         .logo {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
             color: #38bdf8;
         }
@@ -62,22 +65,25 @@
 
         .hero {
             min-height: 90vh;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             text-align: center;
             padding: 60px 20px;
+
             background:
                 radial-gradient(circle at top, #164e63, transparent 45%),
                 #0f172a;
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 900px;
         }
 
         .hero h1 {
-            font-size: 56px;
+            font-size: 58px;
             margin-bottom: 20px;
             color: #f8fafc;
         }
@@ -100,12 +106,19 @@
         }
 
         .btn {
-            padding: 13px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
             display: inline-block;
+
+            padding: 12px 24px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
         }
 
         .primary {
@@ -115,7 +128,7 @@
 
         .primary:hover {
             background: #7dd3fc;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
         }
 
         .secondary {
@@ -126,9 +139,10 @@
         .secondary:hover {
             background: #38bdf8;
             color: #082f49;
+            transform: translateY(-3px);
         }
 
-        /* COMMON */
+        /* COMMON SECTION */
 
         section {
             padding: 80px 8%;
@@ -136,15 +150,15 @@
 
         .section-title {
             text-align: center;
-            font-size: 36px;
-            margin-bottom: 15px;
+            font-size: 38px;
             color: #f8fafc;
+            margin-bottom: 15px;
         }
 
         .section-subtitle {
             text-align: center;
             color: #94a3b8;
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto 50px;
         }
 
@@ -157,9 +171,13 @@
         .about-box {
             max-width: 900px;
             margin: auto;
+
             background: #1e293b;
+
             padding: 35px;
+
             border-radius: 15px;
+
             border: 1px solid #334155;
         }
 
@@ -168,47 +186,106 @@
             margin-bottom: 15px;
         }
 
-        /* FEATURES */
+        /* MODULES */
 
         .features {
             display: grid;
+
             grid-template-columns: repeat(5, 1fr);
+
             gap: 20px;
         }
 
         .card {
             background: #1e293b;
+
             border: 1px solid #334155;
-            border-radius: 14px;
+
+            border-radius: 15px;
+
             padding: 25px;
+
             transition: 0.3s;
+
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
-            transform: translateY(-7px);
+            transform: translateY(-8px);
             border-color: #38bdf8;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
         }
 
         .icon {
-            font-size: 35px;
+            font-size: 40px;
             margin-bottom: 15px;
         }
 
         .card h3 {
             color: #38bdf8;
             margin-bottom: 12px;
+            font-size: 20px;
         }
 
         .card p {
             color: #94a3b8;
             font-size: 14px;
+            margin-bottom: 12px;
         }
 
         .card ul {
             padding-left: 18px;
-            margin-top: 12px;
             color: #cbd5e1;
             font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .card li {
+            margin-bottom: 4px;
+        }
+
+        .card-buttons {
+            margin-top: auto;
+
+            display: flex;
+
+            gap: 8px;
+
+            flex-wrap: wrap;
+        }
+
+        .small-btn {
+            padding: 9px 13px;
+
+            border-radius: 7px;
+
+            font-size: 13px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .source-btn {
+            background: #38bdf8;
+            color: #082f49;
+        }
+
+        .source-btn:hover {
+            background: #7dd3fc;
+        }
+
+        .learn-btn {
+            border: 1px solid #64748b;
+            color: #cbd5e1;
+        }
+
+        .learn-btn:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
         }
 
         /* ALGORITHMS */
@@ -218,40 +295,104 @@
         }
 
         .algorithm-grid {
-            max-width: 900px;
+            max-width: 1000px;
+
             margin: auto;
+
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 18px;
         }
 
         .algorithm {
-            padding: 20px;
             background: #1e293b;
+
+            padding: 22px;
+
             border-radius: 10px;
+
             text-align: center;
+
             border: 1px solid #334155;
+
+            transition: 0.3s;
+        }
+
+        .algorithm:hover {
+            border-color: #38bdf8;
+            transform: translateY(-4px);
         }
 
         .algorithm strong {
-            color: #38bdf8;
             display: block;
+
+            color: #38bdf8;
+
+            font-size: 18px;
+
             margin-bottom: 5px;
         }
 
         .algorithm span {
             color: #94a3b8;
+
             font-size: 14px;
         }
 
-        /* HOW TO RUN */
+        /* DETAILS */
+
+        .details-container {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .detail-box {
+            background: #1e293b;
+
+            border: 1px solid #334155;
+
+            border-radius: 14px;
+
+            padding: 30px;
+
+            margin-bottom: 25px;
+        }
+
+        .detail-box h3 {
+            color: #38bdf8;
+
+            margin-bottom: 10px;
+
+            font-size: 24px;
+        }
+
+        .detail-box p {
+            color: #cbd5e1;
+
+            margin-bottom: 12px;
+        }
+
+        .detail-box ul {
+            margin-left: 20px;
+
+            color: #94a3b8;
+        }
+
+        /* RUN */
 
         .run-box {
             max-width: 850px;
+
             margin: auto;
+
             background: #020617;
+
             padding: 30px;
+
             border-radius: 12px;
+
             border: 1px solid #334155;
         }
 
@@ -261,17 +402,30 @@
 
         .step h3 {
             color: #38bdf8;
+
             margin-bottom: 8px;
+        }
+
+        .step p {
+            color: #cbd5e1;
         }
 
         code {
             display: block;
+
             background: #111827;
+
             padding: 15px;
+
             border-radius: 8px;
+
             color: #7dd3fc;
+
             margin-top: 10px;
+
             font-family: Consolas, monospace;
+
+            overflow-x: auto;
         }
 
         /* STRUCTURE */
@@ -282,17 +436,25 @@
 
         .structure-box {
             max-width: 700px;
+
             margin: auto;
+
             background: #020617;
+
             padding: 30px;
+
             border-radius: 12px;
+
             border: 1px solid #334155;
         }
 
         pre {
             color: #cbd5e1;
+
             overflow-x: auto;
+
             font-family: Consolas, monospace;
+
             line-height: 1.7;
         }
 
@@ -304,25 +466,39 @@
 
         .github-box {
             max-width: 750px;
+
             margin: auto;
-            padding: 40px;
+
+            padding: 45px;
+
             background: #1e293b;
+
             border-radius: 15px;
+
             border: 1px solid #334155;
+        }
+
+        .github-box h2 {
+            margin-bottom: 15px;
         }
 
         .github-box p {
             color: #94a3b8;
-            margin: 15px 0 25px;
+
+            margin-bottom: 25px;
         }
 
         /* FOOTER */
 
         footer {
             text-align: center;
+
             padding: 25px;
+
             background: #020617;
+
             color: #64748b;
+
             border-top: 1px solid #334155;
         }
 
@@ -332,26 +508,36 @@
 
         /* RESPONSIVE */
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1100px) {
+
             .features {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .hero h1 {
-                font-size: 45px;
-            }
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 750px) {
+
             nav {
                 flex-direction: column;
+
                 gap: 15px;
             }
 
             nav ul {
                 gap: 12px;
+
                 flex-wrap: wrap;
+
                 justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 17px;
             }
 
             .features {
@@ -362,37 +548,60 @@
                 grid-template-columns: 1fr;
             }
 
-            .hero h1 {
-                font-size: 36px;
+            section {
+                padding: 60px 5%;
             }
 
-            .hero p {
-                font-size: 17px;
-            }
         }
     </style>
 </head>
 
+
 <body>
 
-    <!-- NAVBAR -->
+
+    <!-- ================= NAVBAR ================= -->
 
     <nav>
-        <div class="logo">OS Simulator</div>
+
+        <div class="logo">
+            OS Simulator
+        </div>
 
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#features">Modules</a></li>
-            <li><a href="#algorithms">Algorithms</a></li>
-            <li><a href="#run">Run</a></li>
-            <li><a href="#github">GitHub</a></li>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#features">Modules</a>
+            </li>
+
+            <li>
+                <a href="#algorithms">Algorithms</a>
+            </li>
+
+            <li>
+                <a href="#run">Run</a>
+            </li>
+
+            <li>
+                <a href="#github">GitHub</a>
+            </li>
+
         </ul>
+
     </nav>
 
 
-    <!-- HERO -->
+    <!-- ================= HERO ================= -->
 
-    <section class="hero">
+    <section class="hero" id="home">
 
         <div class="hero-content">
 
@@ -403,23 +612,28 @@
 
             <p>
                 An interactive Python-based desktop application
-                that demonstrates fundamental Operating System concepts
+                demonstrating fundamental Operating System concepts
                 through a user-friendly graphical interface.
             </p>
 
             <div class="buttons">
 
                 <a
-                    href="https://github.com/jliya99/Operating-System-Simulator"
-                    target="_blank"
+                    href="#features"
                     class="btn primary">
-                    View Source Code
+
+                    Explore Modules
+
                 </a>
 
+
                 <a
-                    href="#features"
+                    href="https://github.com/jliya99/Operating-System-Simulator"
+                    target="_blank"
                     class="btn secondary">
-                    Explore Project
+
+                    View GitHub
+
                 </a>
 
             </div>
@@ -429,37 +643,47 @@
     </section>
 
 
-    <!-- ABOUT -->
+    <!-- ================= ABOUT ================= -->
 
-    <section id="about" class="about">
+    <section class="about" id="about">
 
         <h2 class="section-title">
             About The Project
         </h2>
 
         <p class="section-subtitle">
-            A practical Operating System simulation project developed
+
+            A practical Operating System project developed
             using Python and Tkinter.
+
         </p>
+
 
         <div class="about-box">
 
             <p>
-                The Operating System Simulator is designed to demonstrate
-                important concepts of Operating Systems in an interactive
-                and easy-to-understand way.
+
+                The Operating System Simulator demonstrates important
+                Operating System concepts through an interactive
+                graphical user interface.
+
             </p>
 
             <p>
-                The application contains modules for Process Management,
-                CPU Scheduling, Memory Management, File Management,
+
+                The application contains five major modules:
+                Process Management, CPU Scheduling,
+                Memory Management, File Management,
                 and Deadlock Management.
+
             </p>
 
             <p>
-                It implements well-known algorithms such as FCFS,
-                SJF, Round Robin, FIFO, LRU, Paging, and
-                Banker's Algorithm.
+
+                The project implements algorithms including
+                FCFS, SJF, Round Robin, FIFO, LRU,
+                Paging, and Banker's Algorithm.
+
             </p>
 
         </div>
@@ -467,7 +691,7 @@
     </section>
 
 
-    <!-- FEATURES -->
+    <!-- ================= MODULES ================= -->
 
     <section id="features">
 
@@ -476,19 +700,31 @@
         </h2>
 
         <p class="section-subtitle">
-            Five major Operating System modules are included in the simulator.
+
+            Click the buttons below to explore each module
+            or view its source code.
+
         </p>
+
 
         <div class="features">
 
+
+            <!-- PROCESS -->
+
             <div class="card">
 
-                <div class="icon">⚙️</div>
+                <div class="icon">
+                    ⚙️
+                </div>
 
-                <h3>Process Management</h3>
+                <h3>
+                    Process Management
+                </h3>
 
                 <p>
-                    Manage processes and demonstrate basic process operations.
+                    Manage processes and demonstrate
+                    basic process operations.
                 </p>
 
                 <ul>
@@ -498,17 +734,45 @@
                     <li>Process Status</li>
                 </ul>
 
+                <div class="card-buttons">
+
+                    <a
+                        href="https://github.com/jliya99/Operating-System-Simulator/blob/main/modules/process_management.py"
+                        target="_blank"
+                        class="small-btn source-btn">
+
+                        View Source
+
+                    </a>
+
+                    <a
+                        href="#process-details"
+                        class="small-btn learn-btn">
+
+                        Learn More
+
+                    </a>
+
+                </div>
+
             </div>
 
 
+            <!-- CPU -->
+
             <div class="card">
 
-                <div class="icon">🖥️</div>
+                <div class="icon">
+                    🖥️
+                </div>
 
-                <h3>CPU Scheduling</h3>
+                <h3>
+                    CPU Scheduling
+                </h3>
 
                 <p>
-                    Simulate different CPU scheduling algorithms.
+                    Simulate different CPU scheduling
+                    algorithms.
                 </p>
 
                 <ul>
@@ -518,17 +782,45 @@
                     <li>Gantt Chart</li>
                 </ul>
 
+                <div class="card-buttons">
+
+                    <a
+                        href="https://github.com/jliya99/Operating-System-Simulator/blob/main/modules/cpu_scheduling.py"
+                        target="_blank"
+                        class="small-btn source-btn">
+
+                        View Source
+
+                    </a>
+
+                    <a
+                        href="#cpu-details"
+                        class="small-btn learn-btn">
+
+                        Learn More
+
+                    </a>
+
+                </div>
+
             </div>
 
 
+            <!-- MEMORY -->
+
             <div class="card">
 
-                <div class="icon">💾</div>
+                <div class="icon">
+                    💾
+                </div>
 
-                <h3>Memory Management</h3>
+                <h3>
+                    Memory Management
+                </h3>
 
                 <p>
-                    Demonstrate paging and page replacement techniques.
+                    Demonstrate paging and page
+                    replacement techniques.
                 </p>
 
                 <ul>
@@ -538,17 +830,45 @@
                     <li>LRU</li>
                 </ul>
 
+                <div class="card-buttons">
+
+                    <a
+                        href="https://github.com/jliya99/Operating-System-Simulator/blob/main/modules/memory_management.py"
+                        target="_blank"
+                        class="small-btn source-btn">
+
+                        View Source
+
+                    </a>
+
+                    <a
+                        href="#memory-details"
+                        class="small-btn learn-btn">
+
+                        Learn More
+
+                    </a>
+
+                </div>
+
             </div>
 
 
+            <!-- FILE -->
+
             <div class="card">
 
-                <div class="icon">📁</div>
+                <div class="icon">
+                    📁
+                </div>
 
-                <h3>File Management</h3>
+                <h3>
+                    File Management
+                </h3>
 
                 <p>
-                    Manage text files using the file management module.
+                    Manage text files using the
+                    file management module.
                 </p>
 
                 <ul>
@@ -558,17 +878,45 @@
                     <li>Write File</li>
                 </ul>
 
+                <div class="card-buttons">
+
+                    <a
+                        href="https://github.com/jliya99/Operating-System-Simulator/blob/main/modules/file_management.py"
+                        target="_blank"
+                        class="small-btn source-btn">
+
+                        View Source
+
+                    </a>
+
+                    <a
+                        href="#file-details"
+                        class="small-btn learn-btn">
+
+                        Learn More
+
+                    </a>
+
+                </div>
+
             </div>
 
 
+            <!-- DEADLOCK -->
+
             <div class="card">
 
-                <div class="icon">🔐</div>
+                <div class="icon">
+                    🔐
+                </div>
 
-                <h3>Deadlock Management</h3>
+                <h3>
+                    Deadlock Management
+                </h3>
 
                 <p>
-                    Detect safe and unsafe states using Banker's Algorithm.
+                    Detect safe and unsafe states
+                    using Banker's Algorithm.
                 </p>
 
                 <ul>
@@ -578,94 +926,359 @@
                     <li>Safe Sequence</li>
                 </ul>
 
+                <div class="card-buttons">
+
+                    <a
+                        href="https://github.com/jliya99/Operating-System-Simulator/blob/main/modules/deadlock_management.py"
+                        target="_blank"
+                        class="small-btn source-btn">
+
+                        View Source
+
+                    </a>
+
+                    <a
+                        href="#deadlock-details"
+                        class="small-btn learn-btn">
+
+                        Learn More
+
+                    </a>
+
+                </div>
+
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- ALGORITHMS -->
+    <!-- ================= ALGORITHMS ================= -->
 
-    <section id="algorithms" class="algorithms">
+    <section class="algorithms" id="algorithms">
 
         <h2 class="section-title">
             Algorithms & Concepts
         </h2>
 
         <p class="section-subtitle">
-            Important Operating System algorithms implemented in the project.
+
+            Important Operating System algorithms implemented
+            in this project.
+
         </p>
+
 
         <div class="algorithm-grid">
 
+
             <div class="algorithm">
+
                 <strong>FCFS</strong>
-                <span>First Come First Serve</span>
+
+                <span>
+                    First Come First Serve
+                </span>
+
             </div>
 
+
             <div class="algorithm">
+
                 <strong>SJF</strong>
-                <span>Shortest Job First</span>
+
+                <span>
+                    Shortest Job First
+                </span>
+
             </div>
 
+
             <div class="algorithm">
+
                 <strong>Round Robin</strong>
-                <span>Time Quantum Scheduling</span>
+
+                <span>
+                    Time Quantum Scheduling
+                </span>
+
             </div>
 
+
             <div class="algorithm">
+
                 <strong>Paging</strong>
-                <span>Memory Management</span>
+
+                <span>
+                    Memory Management
+                </span>
+
             </div>
 
+
             <div class="algorithm">
+
                 <strong>FIFO</strong>
-                <span>Page Replacement</span>
+
+                <span>
+                    Page Replacement
+                </span>
+
             </div>
 
+
             <div class="algorithm">
+
                 <strong>LRU</strong>
-                <span>Least Recently Used</span>
+
+                <span>
+                    Least Recently Used
+                </span>
+
             </div>
 
+
             <div class="algorithm">
+
                 <strong>Banker's Algorithm</strong>
-                <span>Deadlock Avoidance</span>
+
+                <span>
+                    Deadlock Avoidance
+                </span>
+
             </div>
 
+
             <div class="algorithm">
+
                 <strong>Gantt Chart</strong>
-                <span>CPU Scheduling Visualization</span>
+
+                <span>
+                    CPU Scheduling Visualization
+                </span>
+
             </div>
 
+
             <div class="algorithm">
+
                 <strong>File Handling</strong>
-                <span>Create, Read, Write & Delete</span>
+
+                <span>
+                    Create, Read, Write & Delete
+                </span>
+
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- HOW TO RUN -->
+    <!-- ================= DETAILS ================= -->
+
+    <section>
+
+        <h2 class="section-title">
+            Module Details
+        </h2>
+
+        <p class="section-subtitle">
+            Quick overview of the functionality implemented
+            in each module.
+        </p>
+
+
+        <div class="details-container">
+
+
+            <!-- PROCESS DETAILS -->
+
+            <div class="detail-box" id="process-details">
+
+                <h3>
+                    ⚙️ Process Management
+                </h3>
+
+                <p>
+                    This module manages processes inside the
+                    Operating System Simulator.
+                </p>
+
+                <ul>
+
+                    <li>Create new processes.</li>
+
+                    <li>Store Process ID, Name, Arrival Time,
+                        Burst Time and Priority.</li>
+
+                    <li>Display process queue.</li>
+
+                    <li>Terminate selected processes.</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- CPU DETAILS -->
+
+            <div class="detail-box" id="cpu-details">
+
+                <h3>
+                    🖥️ CPU Scheduling
+                </h3>
+
+                <p>
+                    This module demonstrates CPU scheduling
+                    algorithms.
+                </p>
+
+                <ul>
+
+                    <li>First Come First Serve (FCFS).</li>
+
+                    <li>Shortest Job First (SJF).</li>
+
+                    <li>Round Robin scheduling.</li>
+
+                    <li>Completion Time.</li>
+
+                    <li>Waiting Time.</li>
+
+                    <li>Turnaround Time.</li>
+
+                    <li>Gantt Chart.</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- MEMORY DETAILS -->
+
+            <div class="detail-box" id="memory-details">
+
+                <h3>
+                    💾 Memory Management
+                </h3>
+
+                <p>
+                    This module demonstrates paging and
+                    page replacement.
+                </p>
+
+                <ul>
+
+                    <li>Page allocation.</li>
+
+                    <li>Page table.</li>
+
+                    <li>FIFO page replacement.</li>
+
+                    <li>LRU page replacement.</li>
+
+                    <li>Page faults and page hits.</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- FILE DETAILS -->
+
+            <div class="detail-box" id="file-details">
+
+                <h3>
+                    📁 File Management
+                </h3>
+
+                <p>
+                    This module provides basic file management
+                    operations.
+                </p>
+
+                <ul>
+
+                    <li>Create text files.</li>
+
+                    <li>Delete files.</li>
+
+                    <li>Read file content.</li>
+
+                    <li>Write file content.</li>
+
+                    <li>Refresh file list.</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- DEADLOCK DETAILS -->
+
+            <div class="detail-box" id="deadlock-details">
+
+                <h3>
+                    🔐 Deadlock Management
+                </h3>
+
+                <p>
+                    This module implements Banker's Algorithm
+                    for safe-state detection.
+                </p>
+
+                <ul>
+
+                    <li>Maximum resource matrix.</li>
+
+                    <li>Allocation matrix.</li>
+
+                    <li>Available resources.</li>
+
+                    <li>Need matrix.</li>
+
+                    <li>Safe state detection.</li>
+
+                    <li>Safe sequence generation.</li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RUN ================= -->
 
     <section id="run">
 
         <h2 class="section-title">
-            How To Run
+            How To Run The Simulator
         </h2>
 
         <p class="section-subtitle">
-            Follow these simple steps to run the desktop application.
+
+            The website is a project showcase.
+            The actual simulator runs as a Python desktop application.
+
         </p>
+
 
         <div class="run-box">
 
+
             <div class="step">
 
-                <h3>1. Clone the Repository</h3>
+                <h3>
+                    1. Clone the Repository
+                </h3>
 
                 <code>
 git clone https://github.com/jliya99/Operating-System-Simulator.git
@@ -676,7 +1289,9 @@ git clone https://github.com/jliya99/Operating-System-Simulator.git
 
             <div class="step">
 
-                <h3>2. Open the Project Folder</h3>
+                <h3>
+                    2. Open Project Folder
+                </h3>
 
                 <code>
 cd Operating-System-Simulator
@@ -687,7 +1302,9 @@ cd Operating-System-Simulator
 
             <div class="step">
 
-                <h3>3. Run the Application</h3>
+                <h3>
+                    3. Run The Application
+                </h3>
 
                 <code>
 python main.py
@@ -698,21 +1315,25 @@ python main.py
 
             <div class="step">
 
-                <h3>4. Explore the Simulator</h3>
+                <h3>
+                    4. Explore The Simulator
+                </h3>
 
                 <p>
-                    The Operating System Simulator dashboard will open.
-                    Select any module to explore its functionality.
+                    The Operating System Simulator dashboard
+                    will open. Select any module and test
+                    the implemented Operating System concepts.
                 </p>
 
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- PROJECT STRUCTURE -->
+    <!-- ================= STRUCTURE ================= -->
 
     <section class="structure">
 
@@ -721,8 +1342,11 @@ python main.py
         </h2>
 
         <p class="section-subtitle">
-            Organized modular architecture of the Operating System Simulator.
+
+            Modular architecture of the Operating System Simulator.
+
         </p>
+
 
         <div class="structure-box">
 
@@ -737,12 +1361,14 @@ Operating System Simulator
 ├── data
 │   └── Text Files
 │
-└── modules
-    ├── process_management.py
-    ├── cpu_scheduling.py
-    ├── memory_management.py
-    ├── file_management.py
-    └── deadlock_management.py
+├── modules
+│   ├── process_management.py
+│   ├── cpu_scheduling.py
+│   ├── memory_management.py
+│   ├── file_management.py
+│   └── deadlock_management.py
+│
+└── utils
 </pre>
 
         </div>
@@ -750,13 +1376,14 @@ Operating System Simulator
     </section>
 
 
-    <!-- GITHUB -->
+    <!-- ================= GITHUB ================= -->
 
-    <section id="github" class="github">
+    <section class="github" id="github">
 
         <h2 class="section-title">
             GitHub Repository
         </h2>
+
 
         <div class="github-box">
 
@@ -765,15 +1392,20 @@ Operating System Simulator
             </h2>
 
             <p>
-                View the complete source code, project structure,
-                documentation, and implementation on GitHub.
+
+                View the complete source code,
+                project structure and documentation.
+
             </p>
+
 
             <a
                 href="https://github.com/jliya99/Operating-System-Simulator"
                 target="_blank"
                 class="btn primary">
+
                 Open GitHub Repository
+
             </a>
 
         </div>
@@ -781,16 +1413,24 @@ Operating System Simulator
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
         <p>
-            © 2026 <span>Operating System Simulator</span>
-            | Developed using Python & Tkinter
+
+            © 2026
+            <span>Operating System Simulator</span>
+
+            |
+
+            Developed using Python & Tkinter
+
         </p>
 
     </footer>
 
+
 </body>
+
 </html>
